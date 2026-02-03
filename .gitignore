@@ -102,7 +102,6 @@ venv.bak/
 # Project specific
 memo.txt
 *.log
-data/
 models/
 *.pkl
 *.csv

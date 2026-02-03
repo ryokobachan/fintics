@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fintics"
-version = "1.0.0"
+dynamic = ["version"]
 description = "A comprehensive framework for financial data analysis and backtesting trading strategies"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -67,6 +67,9 @@ fintics = "fintics.cli:main"
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["fintics*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "fintics.__version__"}
 
 [tool.black]
 line-length = 100
