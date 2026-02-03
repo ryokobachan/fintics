@@ -1,10 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "fintics"
 version = "1.0.0"
-description = "Trading bot framework with backtesting and strategy optimization"
-requires-python = ">=3.9"
+description = "A comprehensive framework for financial data analysis and backtesting trading strategies"
 readme = "README.md"
+requires-python = ">=3.9"
 license = {text = "MIT"}
+keywords = ["trading", "backtesting", "finance", "strategy", "optimization", "technical-analysis", "algorithmic-trading"]
+authors = [
+    {name = "ryokobachan", email = "fintics.org@gmail.com"}
+]
+maintainers = [
+    {name = "ryokobachan", email = "fintics.org@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Developers",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "dill>=0.3.7",
+    "numba>=0.58.0",
+    "numpy>=1.24.0,<2.0.0",
+    "optuna>=3.4.0",
+    "pandas>=2.0.0,<3.0.0",
+    "pandas_flavor>=0.6.0",
+    "scikit-learn>=1.3.0,<2.0.0",
+    "TA-Lib>=0.4.25",
+    "tqdm>=4.65.0",
+    "tradingview-websocket>=0.6.0",
+    "plotly>=5.15.0",
+    "lightgbm>=4.0.0",
+    "prophet>=1.1.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "black>=23.7.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+    "pre-commit>=3.3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ryokobachan/fintics"
+Documentation = "https://github.com/ryokobachan/fintics/blob/main/README.md"
+Repository = "https://github.com/ryokobachan/fintics"
+"Bug Reports" = "https://github.com/ryokobachan/fintics/issues"
 
 [project.scripts]
 fintics = "fintics.cli:main"
@@ -61,7 +116,3 @@ filterwarnings = [
     "ignore::DeprecationWarning",
     "ignore::PendingDeprecationWarning",
 ]
-
-[build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "setuptools.build_meta"
