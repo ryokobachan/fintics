@@ -16,6 +16,26 @@ Advanced trading bot framework with backtesting and strategy optimization capabi
 
 ## Installation
 
+### Prerequisites
+
+Fintics requires TA-Lib, which must be installed at the system level before installing fintics.
+
+**macOS:**
+```bash
+brew install ta-lib
+```
+
+**Ubuntu/Debian:**
+```bash
+sudo apt-get install ta-lib
+```
+
+**Windows:**
+Download the appropriate wheel file from [here](https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib) and install:
+```bash
+pip install TA_Lib‑0.4.xx‑cp3xx‑cp3xx‑win_amd64.whl
+```
+
 ### From PyPI (Recommended)
 
 ```bash
