@@ -16,6 +16,14 @@ Advanced trading bot framework with backtesting and strategy optimization capabi
 
 ## Installation
 
+### From PyPI (Recommended)
+
+```bash
+pip install fintics
+```
+
+### From Source (For Development)
+
 ```bash
 # Navigate to project directory
 cd /path/to/Fintics
